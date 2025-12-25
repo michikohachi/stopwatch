@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stopwatch</title>
+  <link rel="icon" type="image/png" href="img/fortimer-logo.png">
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="icon" href="fortimer-logo.png" type="img/png"> -->
+</head>
+<body>
+  <main class="stopwatch" role="application" aria-label="Stopwatch">
+    <div class="display-wrap">
+      <div id="time" class="time" aria-live="polite">00:00:00.00</div>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn btn-start" data-action="start">Start</button>
+      <button id="stopBtn" class="btn btn-stop" data-action="stop" disabled>Stop</button>
+      <button id="resetBtn" class="btn btn-reset" data-action="reset" disabled>Reset</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

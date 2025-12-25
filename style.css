@@ -1,0 +1,81 @@
+:root{
+ 
+  --panel: #2e8ed8;
+  --time: #ffffff;
+  --start: #2b8cf3;
+  --stop: #e14b4b;
+  --reset: #9aa0a6;
+  --outline-darken: rgba(0,0,0,0.25);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter,Segoe UI,Roboto,Arial,sans-serif;
+  background: url('img/fortimer.webp') center/cover no-repeat fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+/* .stopwatch{
+  width:360px;
+  max-width:96vw;
+  background:linear-gradient(180deg,var(--panel),#175384);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.25);
+  color:var(--time);
+  text-align:center;
+
+} */
+ .stopwatch{
+  width:360px;
+  max-width:96vw;
+  background:linear-gradient(180deg,var(--panel),#175384);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.25);
+  color:var(--time);
+  text-align:center;
+  transform: translateX(200px);
+  /* margin-left: 100px; 👈 moves it to the right */
+}
+.display-wrap{margin-bottom:18px}
+.time{
+  font-family: 'Roboto Mono', Menlo, Monaco, monospace;
+  font-size:2.2rem;
+  background:rgba(255,255,255,0.03);
+  padding:14px 18px;
+  border-radius:8px;
+  color:var(--time);
+  letter-spacing:2px;
+}
+.controls{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+.btn{
+  min-width:88px;
+  height:44px;
+  border-radius:8px;
+  border:2px solid var(--outline-darken);
+  cursor:pointer;
+  font-weight:600;
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:0.55;cursor:default;pointer-events:none}
+.btn-start{background:rgba(88,200,140,0.95);border-color:rgba(20,100,40,0.9)}
+.btn-stop{background:rgba(245,110,110,0.95);border-color:rgba(170,30,30,0.9)}
+.btn-reset{background:rgba(200,205,208,0.95);border-color:rgba(70,75,80,0.9);color:#111}
+
+@media (max-width:420px){
+  .stopwatch{width:320px}
+  .time{font-size:1.8rem}
+  .btn{min-width:72px;height:40px}
+}
